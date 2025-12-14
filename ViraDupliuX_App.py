@@ -119,6 +119,11 @@ TRANSLATIONS = {
         "version_lbl": "نسخه برنامه:",
         "date_lbl": "تاریخ ایجاد:",
         "github_lbl": "گیت‌هاب:",
+
+        "donate_lbl": "حمایت مالی:",
+        "donate_val": "☕ خرید قهوه (Coffeete)",
+        "btn_donate": "☕ حمایت مالی",
+
         "date_val": "یکشنبه 23 آذر 1404\nساعت 12:30 ظهر",
         "dev_name": "محمد حسین سلیمانی",
         "company_name": "ویرا افزار تاراز",
@@ -179,6 +184,11 @@ TRANSLATIONS = {
         "version_lbl": "Version:",
         "date_lbl": "Created Date:",
         "github_lbl": "GitHub:",
+
+        "donate_lbl": "Support:",
+        "donate_val": "☕ Buy me a coffee",
+        "btn_donate": "☕ Donate",
+
         "date_val": "Sunday, December 14, 2025\n12:30 PM",
         "dev_name": "Mohammad Hossein Soleymani",
         "company_name": "Vira Afzar Taraz",
@@ -387,6 +397,9 @@ class BeautifulDuplicateFinder:
         self.btn_stats = ttk.Button(bottom_panel, command=self.show_stats_popup)
         self.btn_stats.pack(side="right", padx=5)
 
+        self.btn_donate_main = ttk.Button(bottom_panel, command=lambda: webbrowser.open("https://www.coffeete.ir/mhsoleymani"))
+        self.btn_donate_main.pack(side="right", padx=5)
+
         # +++ About Button +++
         self.btn_about = ttk.Button(bottom_panel, command=self.show_about_popup)
         self.btn_about.pack(side="right", padx=5)
@@ -437,6 +450,7 @@ class BeautifulDuplicateFinder:
         self.btn_auto.config(text=T["auto_sel"])
         self.btn_export.config(text=T["export_csv"])
         self.btn_stats.config(text=T["stats"])
+        self.btn_donate_main.config(text=T["btn_donate"])
         self.btn_about.config(text=T["about_btn"]) # Update about text
         self.btn_delete.config(text=T["del_btn"])
         self.status_lbl.config(text=T["status_ready"])
@@ -530,6 +544,9 @@ class BeautifulDuplicateFinder:
 
         # GitHub
         create_link(content_frame, T["github_lbl"], "m9h4s", "https://github.com/m9h4s")
+
+        # Donate
+        create_link(content_frame, T["donate_lbl"], T["donate_val"], "https://www.coffeete.ir/mhsoleymani")
 
         tk.Frame(content_frame, height=2, bg="#eee").pack(fill="x", pady=10)
 
