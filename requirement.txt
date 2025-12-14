@@ -1,0 +1,5 @@
+numpy==2.2.6
+opencv-python==4.12.0.88
+pillow==12.0.0
+Send2Trash==1.8.3
+tkinterdnd2==0.4.3
